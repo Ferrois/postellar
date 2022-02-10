@@ -1,0 +1,10 @@
+$bg-default: #eee;
+$text-default: #111;
+$input-default: rgb(199, 235, 255);
+$input-dark: #242635;
+
+:export {
+    bg-default: $bg-default;
+    text-default: $text-default;
+    input-default: $input-default
+}

@@ -1,0 +1,38 @@
+// .full-height-grow {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.main-wrapper {
+  background-color: #f2f2f2;
+  flex-grow: 1;
+}
+
+.main-container {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.main-left {
+  width: auto;
+  height: auto;
+  background-color: bisque;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 60vw;
+  button {
+    background-color: #3bbe49;
+    border: 0px;
+    margin-top: 50px;
+    width: 100px;
+    z-index: 3;
+  }
+}
