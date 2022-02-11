@@ -17,11 +17,7 @@ function App() {
     if (localStorage.getItem("accessToken") === null) return
     let accessToken = localStorage.getItem("accessToken")
     setLogin({...login,accessToken})
-    
-    // return () => {
-    //   second;
-    // };
-  }, [localStorage.getItem("accessToken")]);
+  }, []);
   
 
   return (

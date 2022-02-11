@@ -28,7 +28,7 @@ const Register = () => {
       alert("Password must be 6-50 Characters long");
       return;
     }
-    const res = await axios.post("http://localhost:4000/register", userInfo);
+    const res = await axios.post("https://postellar-server.herokuapp.com/register", userInfo);
     if (res.data.type === "error") {
       alert(res.data.message);
       return;

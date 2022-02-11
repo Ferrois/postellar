@@ -8,7 +8,7 @@ const Chat = () => {
   const [chat, setChat] = useState([]);
   const [inputChat, setInputChat] = useState({ content: "" });
   useEffect(async () => {
-    const reqChat = await axios.get("http://localhost:4000/chat", {
+    const reqChat = await axios.get("https://postellar-server.herokuapp.com/chat", {
       headers: {
         Authorization: `Bearer ${login.accessToken}`,
       },
@@ -22,7 +22,7 @@ const Chat = () => {
   };
 
   const submitHandler = (e) => {
-    axios.post("http://localhost:4000/chat", inputChat, {
+    axios.post("https://postellar-server.herokuapp.com/chat", inputChat, {
       headers: {
         Authorization: `Bearer ${login.accessToken}`,
       },

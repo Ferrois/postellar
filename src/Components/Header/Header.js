@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(async () => {
     if (login.accessToken === null) return;
-    const res = await axios.get("http://localhost:4000/login", {
+    const res = await axios.get("https://postellar-server.herokuapp.com/login", {
       headers: {
         Authorization: `Bearer ${login.accessToken}`,
       },

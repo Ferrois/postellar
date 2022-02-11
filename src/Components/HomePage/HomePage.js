@@ -7,13 +7,13 @@ import "./HomePage.css"
 const HomePage = () => {
   const [posts, setPosts] = useState(["1", "2"]);
   useEffect(async () => {
-    const postsRequest = await axios.get("http://localhost:4000/posts");
+    const postsRequest = await axios.get("https://postellar-server.herokuapp.com/posts");
     setPosts(postsRequest.data);
     console.log(postsRequest.data);
   }, []);
 
   const renderPosts = async () => {
-    const postsRequest = await axios.get("http://localhost:4000/posts");
+    const postsRequest = await axios.get("https://postellar-server.herokuapp.com/posts");
     return postsRequest.data;
   };
 
