@@ -23,7 +23,10 @@
 .main-left {
   width: auto;
   height: auto;
-  background-color: bisque;
+  background-color: #0001;
+  -webkit-transform: scale(2) translateX(-20px);
+          transform: scale(2) translateX(-20px);
+  border-radius: 20px;
 }
 
 .main-right {
@@ -61,5 +64,14 @@
 .main-right button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+  .main-left {
+    display: none;
+  }
+  .main-right {
+    max-width: 70vw;
+  }
 }
 /*# sourceMappingURL=LandingPage.css.map */

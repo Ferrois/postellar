@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 import { useNavigate } from "react-router-dom";
+import PostellarIcon from "../PostellarIcon/PostellarIcon";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const LandingPage = () => {
   return (
     <div className="main-wrapper full-height-grow">
       <div className="main-container">
-        <div className="main-left"><h1>image goes here...</h1></div>
+        <div className="main-left"><PostellarIcon/></div>
         <div className="main-right">
           <h2>Post to your heart's content</h2>
           <p>
