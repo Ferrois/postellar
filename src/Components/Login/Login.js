@@ -36,6 +36,7 @@ const Login = () => {
   return (
     <div>
       <h1>Login to your account</h1>
+      <p>No account? <b onClick={()=>navigate("/register")} style={{textDecoration:"underline",cursor:"pointer"}}>Create one!</b></p>
       <form className="login-form">
         <input
           type="text"

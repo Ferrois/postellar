@@ -21,19 +21,20 @@ const Chat = () => {
     setInputChat({ content: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = () => {
     axios.post("https://postellar-server.herokuapp.com/chat", inputChat, {
       headers: {
         Authorization: `Bearer ${login.accessToken}`,
       },
     });
+    setInputChat({content : ""});
   };
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
-        <input type="text" onChange={changeHandler} />
-        <button type="submit">Send</button>
+      <form >
+        <input type="text" onChange={changeHandler} value={inputChat.content}/>
+        <button type="button" onClick={submitHandler}>Send</button>
       </form>
       {chat.map((chat) => {
         return (

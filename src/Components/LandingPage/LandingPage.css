@@ -37,14 +37,29 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  max-width: 60vw;
+  max-width: 40vw;
+  padding: 30px;
 }
 
 .main-right button {
   background-color: #3bbe49;
-  border: 0px;
+  border: 2px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 10px #0002;
+          box-shadow: 3px 3px 10px #0002;
   margin-top: 50px;
-  width: 100px;
+  width: 120px;
+  height: 40px;
   z-index: 3;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.main-right button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=LandingPage.css.map */

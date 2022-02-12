@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState({ username: "", password: "" });
@@ -28,17 +29,24 @@ const Register = () => {
       alert("Password must be 6-50 Characters long");
       return;
     }
-    const res = await axios.post("https://postellar-server.herokuapp.com/register", userInfo);
+    const res = await axios.post(
+      "https://postellar-server.herokuapp.com/register",
+      userInfo
+    );
     if (res.data.type === "error") {
       alert(res.data.message);
       return;
     }
-    console.log(res);
+    alert("Successfully created account! Please login to use the website");
+    navigate("/login")
   };
-
+  const navigate = useNavigate();
   return (
     <div>
       <h1>Join Postellar Now!</h1>
+      <p>
+        <b onClick={()=>navigate("/login")} style={{cursor:"pointer",textDecoration:"underline"}}>Click here</b> if you already have an account
+      </p>
       <form className="register-form">
         <input
           type="text"

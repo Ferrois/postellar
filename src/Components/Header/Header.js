@@ -11,11 +11,14 @@ const Header = () => {
 
   useEffect(async () => {
     if (login.accessToken === null) return;
-    const res = await axios.get("https://postellar-server.herokuapp.com/login", {
-      headers: {
-        Authorization: `Bearer ${login.accessToken}`,
-      },
-    });
+    const res = await axios.get(
+      "https://postellar-server.herokuapp.com/login",
+      {
+        headers: {
+          Authorization: `Bearer ${login.accessToken}`,
+        },
+      }
+    );
     setLogin({ ...login, loggedInAs: res.data.username, loggedIn: true });
   }, [login.accessToken]);
 
@@ -76,11 +79,15 @@ const DropdownList = () => {
     <div className="dropdown-list">
       <ul>
         <li>
-          <Link to={"/home"}>Home</Link>
+          <Link to={"/home"} className="navItem">
+            Home
+          </Link>
         </li>
-        <li>Profile</li>
+        <li>Profile(WIP)</li>
         <li>
-          <Link to={"/chat"}>Chat</Link>
+          <Link to={"/chat"} className="navItem">
+            Chat
+          </Link>
         </li>
         <li onClick={handleLogout}>Log out</li>
       </ul>
@@ -91,12 +98,18 @@ const DropdownList = () => {
 const LoginButtons = ({ toggleDB }) => {
   return (
     <div className="login-btn-container">
-      <Link to={"/login"} onClick={toggleDB}>
-        Login
-      </Link>
-      <Link to={"/register"} onClick={toggleDB}>
-        Register
-      </Link>
+      <ul>
+        <li>
+          <Link to={"/login"} onClick={toggleDB} className="navItem">
+            Login
+          </Link>
+        </li>
+        <li>
+          <Link to={"/register"} onClick={toggleDB} className="navItem">
+            Register
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
