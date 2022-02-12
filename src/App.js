@@ -10,6 +10,7 @@ import { useEffect, useContext } from "react";
 import { LoginContext } from "./Context/LoginContext";
 import HomePage from "./Components/HomePage/HomePage";
 import Chat from "./Components/Chat/Chat";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [login, setLogin] = useContext(LoginContext);
@@ -31,6 +32,7 @@ function App() {
             <Route path="/home" element={login.loggedIn ? <HomePage/>:<Login/>}/>
             <Route path="/chat" element={login.loggedIn ? <Chat/>:<Login/>}/>
           </Routes>
+          <Footer/>
         </Router>
       </div>
   );
