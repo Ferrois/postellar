@@ -14,8 +14,16 @@
 }
 
 button {
-  background-color: #282;
+  background-color: #1d811d;
   color: white;
   border: 1px solid black;
+  cursor: pointer;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+}
+
+button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 /*# sourceMappingURL=Chat.css.map */
