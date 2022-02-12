@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./Header.css";
-import { FaUserAlt } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { LoginContext } from "../../Context/LoginContext";
 import { Link } from "react-router-dom";
 import PostellarIcon from "../PostellarIcon/PostellarIcon";
 import axios from "axios";
+
 
 const Header = () => {
   const [login, setLogin] = useContext(LoginContext);
@@ -57,7 +58,7 @@ const UserIcon = () => {
         </div>
       </div>
       <div className="icon-wrapper" onClick={() => setActive(!active)}>
-        <FaUserAlt />
+        <GiHamburgerMenu />
       </div>
     </div>
   );
