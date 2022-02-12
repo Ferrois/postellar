@@ -1,11 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./Header.css";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineMenu } from "react-icons/ai";
 import { LoginContext } from "../../Context/LoginContext";
 import { Link } from "react-router-dom";
 import PostellarIcon from "../PostellarIcon/PostellarIcon";
 import axios from "axios";
-
 
 const Header = () => {
   const [login, setLogin] = useContext(LoginContext);
@@ -58,7 +57,7 @@ const UserIcon = () => {
         </div>
       </div>
       <div className="icon-wrapper" onClick={() => setActive(!active)}>
-        <GiHamburgerMenu />
+        <AiOutlineMenu />
       </div>
     </div>
   );
